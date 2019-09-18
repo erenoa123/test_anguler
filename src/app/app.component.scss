@@ -1,0 +1,16 @@
+@mixin placement($position, $top) {
+  position: $position;
+  top: $top;
+  left: 0;
+  right: 0;
+}
+
+.header {
+  @include placement(fixed, 0);
+  height: 60px;
+}
+
+.sidenav-container {
+  @include placement(absolute, 60px);
+  bottom: 0;
+}

@@ -1,35 +1,35 @@
-import { TestBed, async } from '@angular/core/testing';
-import { RouterTestingModule } from '@angular/router/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+/* FlexLayout */
+import { FlexLayoutModule } from '@angular/flex-layout';
+/* Schema */
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+/* Components */
 import { AppComponent } from './app.component';
+/* Materials */
+import { MatSidenavModule } from '@angular/material';
 
 describe('AppComponent', () => {
-  beforeEach(async(() => {
+  let component: AppComponent;
+  let fixture: ComponentFixture<AppComponent>;
+
+  beforeEach(() => {
     TestBed.configureTestingModule({
+      declarations: [AppComponent],
       imports: [
-        RouterTestingModule
+        BrowserModule,
+        FlexLayoutModule,
+        BrowserAnimationsModule,
+        MatSidenavModule
       ],
-      declarations: [
-        AppComponent
-      ],
+      schemas: [NO_ERRORS_SCHEMA]
     }).compileComponents();
-  }));
-
-  it('should create the app', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app).toBeTruthy();
+    fixture = TestBed.createComponent(AppComponent);
+    component = fixture.componentInstance;
   });
 
-  it(`should have as title 'pubg-visualizar-ui'`, () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    const app = fixture.debugElement.componentInstance;
-    expect(app.title).toEqual('pubg-visualizar-ui');
-  });
-
-  it('should render title in a h1 tag', () => {
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Welcome to pubg-visualizar-ui!');
+  it('should create', () => {
+    expect(component).toBeTruthy();
   });
 });
