@@ -1,12 +1,16 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
 /* FlexLayout */
 import { FlexLayoutModule } from '@angular/flex-layout';
+
 /* Schema */
 import { NO_ERRORS_SCHEMA } from '@angular/core';
+
 /* Components */
 import { AppComponent } from './app.component';
+
 /* Materials */
 import { MatSidenavModule } from '@angular/material';
 

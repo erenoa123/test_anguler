@@ -3,6 +3,7 @@
  */
 
 import { Component, EventEmitter, Output } from '@angular/core';
+
 /* Models */
 import { MenuItem } from '../../shared/model/other.model';
 
@@ -17,7 +18,7 @@ export class SideNavComponent {
   private _menuItems: MenuItem[] = [
     {
       name: 'Map',
-      route: '/',
+      route: 'maps',
       id: 'menuMap',
       icon: 'map'
     }

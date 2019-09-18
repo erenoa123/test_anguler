@@ -3,5 +3,7 @@
   <mat-sidenav #snav opened="true" mode="side" class="side-nav">
     <app-side-nav></app-side-nav>
   </mat-sidenav>
-  <mat-sidenav-content style="padding: 1% 2% 0 2%;"> </mat-sidenav-content>
+  <mat-sidenav-content style="padding: 1% 2% 0 2%;"
+    ><router-outlet></router-outlet>
+  </mat-sidenav-content>
 </mat-sidenav-container>
