@@ -5,6 +5,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { MapModule } from './maps/map.module';
+import { MaterialModule } from './shared/material.module';
+import { SharedModule } from './shared/shared.module';
 
 /* Components */
 import { AppComponent } from './app.component';
@@ -17,6 +19,8 @@ import { MatSidenavModule } from '@angular/material';
   imports: [
     BrowserAnimationsModule,
     CoreModule,
+    MaterialModule,
+    SharedModule,
     MapModule,
     AppRoutingModule,
     MatSidenavModule
