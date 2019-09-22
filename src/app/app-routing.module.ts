@@ -4,7 +4,9 @@ import { RouterModule, Routes } from '@angular/router';
 /* Components */
 import { ErangelComponent } from './maps/erangel/erangel.component';
 
-const routes: Routes = [{ path: 'maps', component: ErangelComponent }];
+const routes: Routes = [
+  { path: '',   redirectTo: '/maps', pathMatch: 'full' },
+  { path: 'maps', component: ErangelComponent }];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
